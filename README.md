@@ -28,11 +28,20 @@ go run ./cmd/rootca -action generate \
 ### Sign Intermediate CA Certificate
 
 ```bash
-# TODO: Implement
+# Sign intermediate CA CSR
 go run ./cmd/rootca -action sign \
   -csr intermediate-ca.csr \
   -root-cert ./certs/root-ca.crt \
-  -root-key ./certs/root-ca.key
+  -root-key ./certs/root-ca.key \
+  -validity 10
+```
+
+### Inspect Certificate
+
+```bash
+# Inspect a certificate
+go run ./cmd/rootca -action inspect \
+  -cert ./certs/root-ca.crt
 ```
 
 ## Directory Structure
