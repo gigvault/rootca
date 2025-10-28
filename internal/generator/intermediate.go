@@ -97,4 +97,3 @@ func SignIntermediateCA(rootCertPath, rootKeyPath, csrPath, outputDir string, va
 
 	return nil
 }
-

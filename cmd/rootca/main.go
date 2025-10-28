@@ -11,14 +11,14 @@ import (
 
 func main() {
 	var (
-		action      = flag.String("action", "", "Action to perform: generate, sign, inspect")
-		cn          = flag.String("cn", "", "Common Name for the certificate")
-		outputDir   = flag.String("output", "./certs", "Output directory for certificates")
-		validYears  = flag.Int("validity", 20, "Validity period in years")
-		rootCert    = flag.String("root-cert", "", "Path to root CA certificate (for sign action)")
-		rootKey     = flag.String("root-key", "", "Path to root CA private key (for sign action)")
-		csr         = flag.String("csr", "", "Path to CSR file (for sign action)")
-		certPath    = flag.String("cert", "", "Path to certificate file (for inspect action)")
+		action     = flag.String("action", "", "Action to perform: generate, sign, inspect")
+		cn         = flag.String("cn", "", "Common Name for the certificate")
+		outputDir  = flag.String("output", "./certs", "Output directory for certificates")
+		validYears = flag.Int("validity", 20, "Validity period in years")
+		rootCert   = flag.String("root-cert", "", "Path to root CA certificate (for sign action)")
+		rootKey    = flag.String("root-key", "", "Path to root CA private key (for sign action)")
+		csr        = flag.String("csr", "", "Path to CSR file (for sign action)")
+		certPath   = flag.String("cert", "", "Path to certificate file (for inspect action)")
 	)
 
 	flag.Parse()

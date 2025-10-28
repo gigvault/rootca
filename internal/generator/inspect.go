@@ -30,7 +30,7 @@ func InspectCertificate(certPath string) error {
 	fmt.Printf("Is CA: %v\n", cert.IsCA)
 	fmt.Printf("Max Path Length: %d\n", cert.MaxPathLen)
 	fmt.Printf("Key Usage: %s\n", keyUsageToString(cert.KeyUsage))
-	
+
 	if len(cert.ExtKeyUsage) > 0 {
 		fmt.Printf("Extended Key Usage:\n")
 		for _, eku := range cert.ExtKeyUsage {
@@ -130,4 +130,3 @@ func extKeyUsageToString(usage x509.ExtKeyUsage) string {
 		return fmt.Sprintf("Unknown(%d)", usage)
 	}
 }
-
